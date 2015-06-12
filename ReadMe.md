@@ -1,11 +1,9 @@
-`English readme coming soon!`
+`English readme coming soon!` [![Join the chat at https://gitter.im/SkyzohKeyx/JsonLocalize](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/SkyzohKeyx/JsonLocalize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Bonjour à toutes et à tous,
 J'ai aujourd'hui l'honneur de vous présenter une nouvelle classe PHP que vous allez, je le sent dans vos regards pleins d'étoiles, adorer !
 
 # **๖ۣۜIntroduction -**
-
-[![Join the chat at https://gitter.im/SkyzohKeyx/JsonLocalize](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/SkyzohKeyx/JsonLocalize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 **JsonLocalizer** est une *classe PHP* que j'ai développé afin de **pouvoir traduire rapidement** et **sans avoir a utiliser de gros framework** *(gettext, i18n, localize, etc...)*. Mon idée était également de pouvoir **simplement** écrire le **chemin vers la valeur du fichier JSON** directement dans notre vue *(ou page selon l'architecture choisie)*. J'ai donc **longuement réfléchis**, **fais des croquis et des tests** afin de trouver la meilleure façon de faire, tout en **respectant une vraie syntaxe JSON**. Après 3 jours de **développement intensif** - d'optimisations **massives** et de **peaufinage du code**, j'en suis donc arrivé à une **version bêta** que je souhaiterais aujourd'hui partager avec vous.
 
 (Surtout que ***Krizzy*** en avait besoin et que *j'adore partager gratuitement et librement* mes projets ^^).
