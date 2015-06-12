@@ -1,0 +1,42 @@
+{
+    "_lang":
+    {
+        "author": "ThanosS",
+        "version": "0.0.3",
+        "flag": "fr",
+        "country": "France",
+        "state": "100%"
+    },
+
+    "lang":
+    {
+        "current": "Langue courrante :"
+    },
+
+    "errors":
+    {
+        "404":
+        {
+            "title": "Erreur 404 - Page introuvable.",
+            "message": "La page que vous avez demandé n'a pas pu être trouvée. Merci de contacter le webmaster de ce site si vous pensez que cette page devrait exister."
+        }
+    },
+
+    "website":
+    {
+        "title": "Mon putain de site",
+        "welcome": "Bienvenue",
+        "tagline": "Je suis un texte en français.",
+        "codeOfPage": "Code pour cette page :",
+
+        "home":
+        {
+            "introduction": "Ceci est un exemple de comment JsonLocalize gére les traductions sur un site web"
+        }
+    },
+
+    "JsonLocalizer":
+    {
+        "downloadNow": "Téléchargez JsonLocalizer dès maintenant !"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "_lang":
+    {
+        "author": "ThanosS",
+        "version": "0.0.3",
+        "flag": "es",
+        "country": "Espagna",
+        "state": "0%"
+    },
+
+    "lang":
+    {
+        "current": "Lingua:"
+    },
+
+    "errors":
+    {
+        "404":
+        {
+            "title": "Error 404 - página no encontrada.",
+            "message": "No se pudo encontrar la página solicitada. Póngase en contacto con el webmaster de este sitio si usted cree que esta página exista."
+        }
+    },
+
+    "website":
+    {
+        "title": "Mi puto sitio",
+        "welcome": "Bienvenido",
+        "tagline": "Tengo un texto en español.",
+        "codeOfPage": "Codigo de la página:",
+
+        "home":
+        {
+            "introduction": "Este es un ejemplo de cómo JsonLocalize gere en un web site traducciones"
+        }
+    },
+
+    "JsonLocalizer":
+    {
+        "downloadNow": "Descargar JsonLocalizer ahora!"
+    }
+}

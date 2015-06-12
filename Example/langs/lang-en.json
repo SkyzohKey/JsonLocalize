@@ -1,0 +1,42 @@
+{
+    "_lang":
+    {
+        "author": "ThanosS",
+        "version": "0.0.2",
+        "flag": "en",
+        "country": "USA",
+        "state": "100%"
+    },
+
+    "lang":
+    {
+        "current": "Current language:"
+    },
+
+    "errors":
+    {
+        "404":
+        {
+            "title": "Error 404 - Page not found.",
+            "message": "The page you requested could not be found. Please contact the webmaster of this site if you think that this page should exist."
+        }
+    },
+
+    "website":
+    {
+        "title": "My fucking website",
+        "welcome": "Welcome",
+        "tagline": "I'm a text in english.",
+        "codeOfPage": "Code of the page:",
+
+        "home":
+        {
+            "introduction": "This is an example of how JsonLocalize handles the translations on a web site"
+        }
+    },
+
+    "darktox":
+    {
+        "downloadNow": "Download DarkTox right now!"
+    }
+}
