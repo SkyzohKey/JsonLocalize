@@ -1,4 +1,4 @@
-[![Join the chat at https://gitter.im/SkyzohKeyx/JsonLocalize](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/SkyzohKeyx/JsonLocalize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/SkyzohKeyx/JsonLocalize](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/SkyzohKeyx/JsonLocalize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  
 `English readme coming soon!`
 
 Bonjour à toutes et à tous,
