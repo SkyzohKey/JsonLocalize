@@ -16,7 +16,7 @@ $includesExt = '.class.php';
 
 $imagesPath = './images/';
 
-require_once($includesPath.'Parser'.$includesExt);
+require_once($includesPath.'JsonLocalizer'.$includesExt);
 session_start();
 
 $parser = new Parser($langsPath, 'json', 'fr');
@@ -77,7 +77,7 @@ else
     $parser->render($file);
 }
 
-$paser->render(null, '<p>
+$parser->render(null, '<p>
     <h2>{website.codeOfPage}</h2>
     <pre><code>" . $file . "</code></pre>
 </p>');
