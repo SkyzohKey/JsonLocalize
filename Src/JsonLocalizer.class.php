@@ -125,7 +125,7 @@ class JsonLocalizer
         }
 
         // Save lang file infos and delete the key in the self::currentLangJson array.
-        $this->currentLangInfos = $currentLangJson->_lang;
+        $this->currentLangInfos = $currentLangJso['_lang'];
         unset($currentLangJson->_lang);
 
         /**
