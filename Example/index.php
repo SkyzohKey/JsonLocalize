@@ -19,7 +19,7 @@ $imagesPath = './images/';
 require_once($includesPath.'JsonLocalizer'.$includesExt);
 session_start();
 
-$parser = new Parser($langsPath, 'json', 'fr');
+$parser = new JsonLocalizer($langsPath, 'json', 'fr');
 
 // ATTENTION: DIRTY CODE BESIDE.
 // TODO: Change this piece of shit.
