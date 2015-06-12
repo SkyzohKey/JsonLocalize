@@ -1,3 +1,5 @@
+`English readme coming soon!`
+
 Bonjour à toutes et à tous,
 J'ai aujourd'hui l'honneur de vous présenter une nouvelle classe PHP que vous allez, je le sent dans vos regards pleins d'étoiles, adorer !
 
@@ -8,7 +10,7 @@ J'ai aujourd'hui l'honneur de vous présenter une nouvelle classe PHP que vous a
 
 # **๖ۣۜExemples -**
 ## - Inclure la classe et instancier l'objet :
-    
+
     $parser = new JsonLocalizer("./langs/", "json", "fr");
 
 ## - Récupérer la langue dans une session et rendre la page :
@@ -19,7 +21,7 @@ J'ai aujourd'hui l'honneur de vous présenter une nouvelle classe PHP que vous a
     $parser->render('./pages/home.php');
 
 ## - Rendre un texte au lieu d'un fichier :
-    
+
     $parser->render(null, '<span class="hint">{home.fields.username.hint}</span>');[/php]
 
 ## - Rendre plusieurs pages/vues avec le chaining :
