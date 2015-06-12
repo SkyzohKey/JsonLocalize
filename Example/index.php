@@ -26,7 +26,7 @@ $parser = new JsonLocalizer($langsPath, 'json', 'fr');
 // Fast handle of lang.
 if (isset($_GET['lang']))
 {
-    $_SESSION['lang'] == htmlentities($_GET['lang']);
+    $_SESSION['lang'] = htmlentities($_GET['lang']);
     $parser->setLang($_SESSION['lang']);
 }
 elseif (isset($_SESSION['lang']))
@@ -38,7 +38,7 @@ else
     $parser->setLang($defaultLang);
 }
 
-echo $parser->render(null, '{lang.current} :' . $parser->getLang() . '<hr>');
+$parser->render(null, '{lang.current} :' . $parser->getLang() . '<hr>');
 $parser->render(null, '<!DOCTYPE html>
 <html>
     <head>
@@ -79,7 +79,7 @@ else
 
 $parser->render(null, '<p>
     <h2>{website.codeOfPage}</h2>
-    <pre><code>" . $file . "</code></pre>
+    <pre><code>' . $file . '</code></pre>
 </p>');
 
 echo '</body></html>';
