@@ -38,7 +38,6 @@ else
     $parser->setLang($defaultLang);
 }
 
-$parser->render(null, '{lang.current} :' . $parser->getLang() . '<hr>');
 $parser->render(null, '<!DOCTYPE html>
 <html>
     <head>
@@ -47,6 +46,7 @@ $parser->render(null, '<!DOCTYPE html>
     </head>
     <body>
 ');
+$parser->render(null, '{lang.current} {_lang.country} ({_lang.flag}) - <a href="?p=' . htmlentities($_GET['p']) . '&lang=fr">[fr]</a> <a href="?p=' . htmlentities($_GET['p']) . '&lang=en">[en]</a> <a href="?p=' . htmlentities($_GET['p']) . '&lang=es">[es]</a> <hr>');
 $file = '';
 if (isset($_GET) && !empty($_GET))
 {
@@ -77,9 +77,12 @@ else
     $parser->render($file);
 }
 
-$parser->render(null, '<p>
-    <h2>{website.codeOfPage}</h2>
-    <pre><code>' . $file . '</code></pre>
-</p>');
+$fileContent = file_get_contents($file);
 
-echo '</body></html>';
+$parser->render(null, '<p>
+    <h2>{website.codeOfPage}</h2>');
+
+echo '<pre><code>File: ' . $file . '
+
+' . htmlentities($fileContent) . '</code></pre>
+</p></body></html>';

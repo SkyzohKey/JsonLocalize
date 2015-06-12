@@ -4,7 +4,7 @@
         "author": "ThanosS",
         "version": "0.0.2",
         "flag": "en",
-        "country": "USA",
+        "country": "English",
         "state": "100%"
     },
 
@@ -35,8 +35,8 @@
         }
     },
 
-    "darktox":
+    "JsonLocalizer":
     {
-        "downloadNow": "Download DarkTox right now!"
+        "downloadNow": "Download JsonLocalizer right now!"
     }
 }
