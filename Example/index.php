@@ -26,7 +26,7 @@ $parser = new JsonLocalizer($langsPath, 'json', 'fr');
 // Fast handle of lang.
 if (isset($_GET['lang']))
 {
-    $from = $_SERVER['HTTP_REFERER'];
+    $from = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'home';
     $_SESSION['lang'] = htmlentities($_GET['lang']);
     //$parser->setLang($_SESSION['lang']);
     header('Location: ' . $from);
