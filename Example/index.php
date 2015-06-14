@@ -26,8 +26,10 @@ $parser = new JsonLocalizer($langsPath, 'json', 'fr');
 // Fast handle of lang.
 if (isset($_GET['lang']))
 {
+    $from = $_SERVER['HTTP_REFERER'];
     $_SESSION['lang'] = htmlentities($_GET['lang']);
-    $parser->setLang($_SESSION['lang']);
+    //$parser->setLang($_SESSION['lang']);
+    header('Location: ' . $from);
 }
 elseif (isset($_SESSION['lang']))
 {
@@ -46,7 +48,7 @@ $parser->render(null, '<!DOCTYPE html>
     </head>
     <body>
 ');
-$parser->render(null, '{lang.current} {_lang.country} ({_lang.flag}) - <a href="?p=' . htmlentities($_GET['p']) . '&lang=fr">[fr]</a> <a href="?p=' . htmlentities($_GET['p']) . '&lang=en">[en]</a> <a href="?p=' . htmlentities($_GET['p']) . '&lang=es">[es]</a> <hr>');
+$parser->render(null, '{lang.current} {_lang.country} ({_lang.flag}) - <a href="?lang=fr">[fr]</a> <a href="?lang=en">[en]</a> <a href="?lang=es">[es]</a> <hr>');
 $file = '';
 if (isset($_GET) && !empty($_GET))
 {
