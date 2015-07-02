@@ -1,7 +1,7 @@
 <?php
 /**
 *   Translation Example
-*   @version   0.0.1
+*   @version   0.0.2
 **/
 
 $pagesPath = './pages/';
@@ -21,6 +21,10 @@ session_start();
 
 $parser = new JsonLocalizer($langsPath, 'json', 'fr');
 
+function isSameDomain () {
+    return strstr($_SERVER['HTTP_REFERER'], $_SERVER['HTTP_HOST']);
+}
+
 // ATTENTION: DIRTY CODE BESIDE.
 // TODO: Change this piece of shit.
 // Fast handle of lang.
@@ -28,8 +32,9 @@ if (isset($_GET['lang']))
 {
     $from = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'home';
     $_SESSION['lang'] = htmlentities($_GET['lang']);
-    //$parser->setLang($_SESSION['lang']);
-    header('Location: ' . $from);
+
+    if (isSameDomain()) header('Location: ' . $from);
+    else header('Location: /');
 }
 elseif (isset($_SESSION['lang']))
 {
