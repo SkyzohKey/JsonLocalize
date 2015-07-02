@@ -125,46 +125,54 @@ class JsonLocalizer
         }
 
         // Save lang file infos and delete the key in the self::currentLangJson array.
-        $this->currentLangInfos = $currentLangJson->_lang;
+        $this->currentLangInfos = $currentLangJso['_lang'];
         unset($currentLangJson->_lang);
 
         /**
         *   If we can match the "/{(.*?)}/s" pattern in the current page then,
         *   use a callback to perform the operations over the current match.
         **/
-        $html = preg_replace_callback('/{(.*?)}/s', function ($matches)
+        try
         {
-        	$tag = $matches[1];
-	    	$indexs = explode('.', $tag);
-	    	$tmp = $this->currentLangJson;
+            $html = preg_replace_callback('/{(.*?)}/s', function ($matches)
+            {
+            	$tag = $matches[1];
+    	    	$indexs = explode('.', $tag);
+    	    	$tmp = $this->currentLangJson;
 
-            // For each index, while iteration count is less than index's count.
-	    	for ($i = 0, $l = count($indexs); $i < $l; $i++)
-	    	{
+                // For each index, while iteration count is less than index's count.
+    	    	for ($i = 0, $l = count($indexs); $i < $l; $i++)
+    	    	{
+                    /**
+                    *   If we can't match a key in the json file then,
+                    *   Set $tmp as null and return.
+                    **/
+    	    		if (!@array_key_exists($indexs[$i], $tmp))
+    	    		{
+    	    			$tmp = null;
+    	    			break;
+    	    		}
+
+                    // TODO: use pointers here instead of this shit.
+    	    		$tmp = $tmp[$indexs[$i]];
+
+    	    	}
+
                 /**
-                *   If we can't match a key in the json file then,
-                *   Set $tmp as null and return.
+                *   If we found a match with a json key then,
+                *   return the value that will replace the current match.
                 **/
-	    		if (!array_key_exists($indexs[$i], $tmp))
-	    		{
-	    			$tmp = null;
-	    			break;
-	    		}
-
-                // TODO: use pointers here instead of this shit.
-	    		$tmp = $tmp[$indexs[$i]];
-	    	}
-
-            /**
-            *   If we found a match with a json key then,
-            *   return the value that will replace the current match.
-            **/
-	    	if ($tmp != null)
-	    		return $tmp;
-            // Else, return the match without changing it.
-            else
-	    		return '{'.$tag.'}';
-        }, $this->currentFile);
+    	    	if ($tmp != null)
+    	    		return $tmp;
+                // Else, return the match without changing it.
+                else
+    	    		return '{'.$tag.'}';
+            }, $this->currentFile);
+        }
+        catch (Exception $e)
+        {
+            // TODO: add a method to log errors.
+        }
 
         // Display the final page and return the object, for chaining.
         echo($html);
