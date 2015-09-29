@@ -33,10 +33,10 @@ $parser->render(null, '<span class="hint">{home.fields.username.hint}</span>');
 ## - Rendre plusieurs pages/vues avec le chaining :
 
 ```php
-$parser->render('./pages/home.php');
-        ->render('./theme/default/menu.php')
-        ->render('./pages/home.php')
-        ->render('./theme/default/footer.php');
+$parser->render('./pages/home.php')
+->render('./theme/default/menu.php')
+->render('./pages/home.php')
+->render('./theme/default/footer.php');
 ```
 
 ## - Fichier langue basique :
