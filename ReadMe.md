@@ -23,7 +23,7 @@ J'ai aujourd'hui l'honneur de vous présenter une nouvelle classe PHP que vous a
 
 ## - Rendre un texte au lieu d'un fichier :
 
-    $parser->render(null, '<span class="hint">{home.fields.username.hint}</span>');[/php]
+    $parser->render(null, '<span class="hint">{home.fields.username.hint}</span>');
 
 ## - Rendre plusieurs pages/vues avec le chaining :
 
