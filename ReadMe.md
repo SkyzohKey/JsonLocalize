@@ -17,7 +17,8 @@ J'ai aujourd'hui l'honneur de vous présenter une nouvelle classe PHP que vous a
 ## - Récupérer la langue dans une session et rendre la page :
 
     session_start();
-    $lang = (isset($_SESSION['lang'])) ? $_SESSION['lang'] : 'fr'; // Si la session 'lang' existe alors on l'utilise, sinon on utilise la langue 'fr'.
+    // Si la session 'lang' existe alors on l'utilise, sinon on utilise la langue 'fr'.
+    $lang = (isset($_SESSION['lang'])) ? $_SESSION['lang'] : 'fr';
     $parser->setLang($lang);
     $parser->render('./pages/home.php');
 
